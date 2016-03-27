@@ -6,5 +6,4 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 
 INCLUDE_DIRECTORIES("${TOP_LEVEL_PROJECT_SOURCE}/Source")
 
-find_library(INSERTIONSORT_LIB InsertionSort)
-target_link_libraries(${INSERTIONSORT_LIB})
+target_link_libraries(${PROJECT_NAME} InsertionSort )
