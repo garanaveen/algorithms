@@ -6,4 +6,4 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 
 INCLUDE_DIRECTORIES("${TOP_LEVEL_PROJECT_SOURCE}/Source")
 
-target_link_libraries(${PROJECT_NAME} InsertionSort)
+target_link_libraries(${PROJECT_NAME} InsertionSort gtest)
