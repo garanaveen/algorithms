@@ -27,7 +27,6 @@ namespace{
         }
         virtual void SetUp()
         {
-            vi.push_back(3);
             vi.push_back(2);
             vi.push_back(1);
         }
@@ -38,11 +37,20 @@ namespace{
         }
 
         vector<int> vi;
+        InsertionSort isort;
 };
-    TEST_F(InsertionSortTest, FirstTest)
-    {
-        EXPECT_EQ(1,1);
-    }
+}
+
+TEST_F(InsertionSortTest, FirstTest)
+{
+    EXPECT_EQ(1,1);
+}
+
+TEST_F(InsertionSortTest, TwoElementSort)
+{
+    isort.Sort(vi);
+    EXPECT_EQ(1,vi.at(0));
+    EXPECT_EQ(2,vi.at(1));
 }
 
 int main(int argc, char** argv)
