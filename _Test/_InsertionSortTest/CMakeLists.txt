@@ -8,7 +8,7 @@ SET (PROJECT_DEPEND
 InsertionSort
 )
 
-add_dependencies(${PROJECT_NAME} PROJECT_DEPEND)
+add_dependencies(${PROJECT_NAME} ${PROJECT_DEPEND})
 INCLUDE_DIRECTORIES("${TOP_LEVEL_PROJECT_SOURCE}/Source")
 
 target_link_libraries(${PROJECT_NAME} InsertionSort gtest)
