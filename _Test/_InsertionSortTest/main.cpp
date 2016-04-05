@@ -3,7 +3,9 @@
 
 #include <vector>
 #include <sorting/InsertionSort/InsertionSort.h>
+
 #include <gtest/gtest.h>
+#include<algorithm>
 
 using namespace std;
 
@@ -52,6 +54,24 @@ TEST_F(InsertionSortTest, TwoElementSort)
     EXPECT_EQ(1,vi.at(0));
     EXPECT_EQ(2,vi.at(1));
 }
+
+
+TEST_F(InsertionSortTest, ManyElementSort)
+{
+    vi.push_back(5);
+    vi.push_back(40);
+    vi.push_back(32);
+    vi.push_back(100);
+    vi.push_back(21);
+    vi.push_back(8);
+
+    vector<int> expectedList = vi;
+    std::sort(expectedList.begin(), expectedList.end());
+    isort.Sort(vi);
+    EXPECT_EQ(vi, expectedList);
+}
+
+
 
 int main(int argc, char** argv)
 {
