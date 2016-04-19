@@ -6,9 +6,10 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 
 SET (PROJECT_DEPEND
 InsertionSort
+MergeSort
 )
 
 add_dependencies(${PROJECT_NAME} ${PROJECT_DEPEND})
 INCLUDE_DIRECTORIES("${TOP_LEVEL_PROJECT_SOURCE}/Source")
 
-target_link_libraries(${PROJECT_NAME} InsertionSort gtest)
+target_link_libraries(${PROJECT_NAME} ${PROJECT_DEPEND} gtest)
