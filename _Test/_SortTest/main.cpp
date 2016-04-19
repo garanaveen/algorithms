@@ -2,7 +2,6 @@
 #include <windows.h>
 
 #include <vector>
-//#include <QtGlobal>
 #include <stdlib.h>
 #include <sorting/InsertionSort/InsertionSort.h>
 
@@ -18,26 +17,40 @@ using namespace std;
 
 namespace{
 
-    class InsertionSortTest : public ::testing::Test
+    class SortTest : public ::testing::Test
     {
     protected:
-        InsertionSortTest()
+        SortTest()
         {
 
         }
-        virtual ~InsertionSortTest()
+
+        virtual ~SortTest()
         {
 
         }
+
         virtual void SetUp()
+        {
+        }
+
+        virtual void TearDown()
+        {
+            vi.clear();
+        }
+
+        void BuildVectorOfOfTwoElements()
         {
             vi.push_back(2);
             vi.push_back(1);
         }
 
-        virtual void TearDown()
+        void BuildVectorOfManyElements()
         {
-
+            for (int i=0; i<100 ; i++)
+            {
+                vi.push_back(rand());
+            }
         }
 
         vector<int> vi;
@@ -45,30 +58,26 @@ namespace{
 };
 }
 
-TEST_F(InsertionSortTest, FirstTest)
+TEST_F(SortTest, InsertionSortTwoElements)
 {
-    EXPECT_EQ(1,1);
-}
-
-TEST_F(InsertionSortTest, TwoElementSort)
-{
+    BuildVectorOfOfTwoElements();
+    InsertionSort isort;
     isort.Sort(vi);
     EXPECT_EQ(1,vi.at(0));
     EXPECT_EQ(2,vi.at(1));
 }
 
 
-TEST_F(InsertionSortTest, ManyElementSort)
+TEST_F(SortTest, InsertionSortManyElementSort)
 {
-    for (int i=0; i<100 ; i++)
-    {
-        vi.push_back(rand());
-    }
+    BuildVectorOfManyElements();
     vector<int> expectedList = vi;
     std::sort(expectedList.begin(), expectedList.end());
+    InsertionSort isort;
     isort.Sort(vi);
     EXPECT_EQ(vi, expectedList);
 }
+
 
 
 
