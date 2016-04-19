@@ -2,6 +2,8 @@
 #include <windows.h>
 
 #include <vector>
+//#include <QtGlobal>
+#include <stdlib.h>
 #include <sorting/InsertionSort/InsertionSort.h>
 
 #include <gtest/gtest.h>
@@ -58,13 +60,10 @@ TEST_F(InsertionSortTest, TwoElementSort)
 
 TEST_F(InsertionSortTest, ManyElementSort)
 {
-    vi.push_back(5);
-    vi.push_back(40);
-    vi.push_back(32);
-    vi.push_back(100);
-    vi.push_back(21);
-    vi.push_back(8);
-
+    for (int i=0; i<100 ; i++)
+    {
+        vi.push_back(rand());
+    }
     vector<int> expectedList = vi;
     std::sort(expectedList.begin(), expectedList.end());
     isort.Sort(vi);
