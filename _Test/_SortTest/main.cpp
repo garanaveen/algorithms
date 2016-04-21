@@ -77,7 +77,7 @@ TEST_F(SortTest, InsertionSortTwoElements)
 }
 
 
-TEST_F(SortTest, InsertionSortManyElementSort)
+TEST_F(SortTest, InsertionSortManyElements)
 {
     BuildVectorOfManyElements();
     vector<int> expectedList = vi;
@@ -106,7 +106,7 @@ TEST_F(SortTest, MergeSortFourElements)
 }
 
 
-TEST_F(SortTest, MergeSortManyElementSort)
+TEST_F(SortTest, MergeSortManyElements)
 {
     BuildVectorOfManyElements();
     vector<int> expectedList = vi;

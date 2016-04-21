@@ -32,12 +32,20 @@ MergeSort::Merge(vector<int>& list, int start, int mid, int end)
     {
         if(leftIndex >= leftSize)
         {
-            list[i] = rightHalf.at(rightIndex++);
+            for(; i <= end; i++)
+            {
+                list[i] = rightHalf.at(rightIndex++);
+            }
+            break;
         }
 
         else if(rightIndex >= rightSize)
         {
-            list[i] = leftHalf.at(leftIndex++);
+            for(; i <= end; i++)
+            {
+                list[i] = leftHalf.at(leftIndex++);
+            }
+            break;
         }
         else
         {

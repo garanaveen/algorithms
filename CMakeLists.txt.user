@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 3.3.0, 2016-04-20T22:32:16. -->
+<!-- Written by QtCreator 3.3.0, 2016-04-20T22:36:51. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -261,7 +261,7 @@
      <value type="int">14</value>
     </valuelist>
     <value type="QString" key="CMakeProjectManager.CMakeRunConfiguation.Title">_SortTest</value>
-    <value type="QString" key="CMakeProjectManager.CMakeRunConfiguration.Arguments">--gtest_filter=SortTest*</value>
+    <value type="QString" key="CMakeProjectManager.CMakeRunConfiguration.Arguments">--gtest_filter=SortTest.MergeSortManyElements</value>
     <value type="bool" key="CMakeProjectManager.CMakeRunConfiguration.UseTerminal">false</value>
     <value type="QString" key="CMakeProjectManager.CMakeRunConfiguration.UserWorkingDirectory"></value>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
