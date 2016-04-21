@@ -22,36 +22,16 @@ void MergeSort::DivideAndSort(vector<int>& list, int start, int end)
 MergeSort::Merge(vector<int>& list, int start, int mid, int end)
 {
     vector<int> leftHalf(list.begin()+start, list.begin()+mid+1);
+    leftHalf.push_back(INT_MAX);
     vector<int> rightHalf(list.begin()+mid+1, list.begin()+end+1);
-
+    rightHalf.push_back(INT_MAX);
     int leftIndex = 0;
     int leftSize = leftHalf.size();
     int rightIndex = 0;
     int rightSize = rightHalf.size();
     for (int i = start; i <= end; i++)
     {
-        if(leftIndex >= leftSize)
-        {
-            for(; i <= end; i++)
-            {
-                list[i] = rightHalf.at(rightIndex++);
-            }
-            break;
-        }
-
-        else if(rightIndex >= rightSize)
-        {
-            for(; i <= end; i++)
-            {
-                list[i] = leftHalf.at(leftIndex++);
-            }
-            break;
-        }
-        else
-        {
-            list[i] = leftHalf.at(leftIndex) < rightHalf.at(rightIndex) ?
-                    leftHalf.at(leftIndex++) : rightHalf.at(rightIndex++);
-        }
+        list[i] = leftHalf.at(leftIndex) < rightHalf.at(rightIndex) ?
+                leftHalf.at(leftIndex++) : rightHalf.at(rightIndex++);
     }
 }
-
