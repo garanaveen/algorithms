@@ -1,5 +1,8 @@
 #define NOMINMAX
+
+#ifdef _WIN32
 #include <windows.h>
+#endif
 
 #include <vector>
 #include <stdlib.h>
@@ -46,7 +49,7 @@ namespace{
             vi.push_back(1);
         }
 
-        BuildVectorOfOfFourElements()
+        void BuildVectorOfOfFourElements()
         {
             vi.push_back(3);
             vi.push_back(4);
@@ -63,14 +66,13 @@ namespace{
         }
 
         vector<int> vi;
-        InsertionSort isort;
 };
 }
 
 TEST_F(SortTest, InsertionSortTwoElements)
 {
     BuildVectorOfOfTwoElements();
-    InsertionSort isort;
+    InsertionSort<int> isort;
     isort.Sort(vi);
     EXPECT_EQ(1,vi.at(0));
     EXPECT_EQ(2,vi.at(1));
@@ -82,7 +84,7 @@ TEST_F(SortTest, InsertionSortManyElements)
     BuildVectorOfManyElements();
     vector<int> expectedList = vi;
     std::sort(expectedList.begin(), expectedList.end());
-    InsertionSort isort;
+    InsertionSort<int> isort;
     isort.Sort(vi);
     EXPECT_EQ(vi, expectedList);
 }
@@ -90,7 +92,7 @@ TEST_F(SortTest, InsertionSortManyElements)
 TEST_F(SortTest, MergeSortTwoElements)
 {
     BuildVectorOfOfTwoElements();
-    MergeSort msort;
+    MergeSort<int> msort;
     msort.Sort(vi);
     EXPECT_EQ(1,vi.at(0));
     EXPECT_EQ(2,vi.at(1));
@@ -99,7 +101,7 @@ TEST_F(SortTest, MergeSortTwoElements)
 TEST_F(SortTest, MergeSortFourElements)
 {
     BuildVectorOfOfFourElements();
-    MergeSort msort;
+    MergeSort<int> msort;
     msort.Sort(vi);
     EXPECT_EQ(1,vi.at(0));
     EXPECT_EQ(2,vi.at(1));
@@ -111,7 +113,7 @@ TEST_F(SortTest, MergeSortManyElements)
     BuildVectorOfManyElements();
     vector<int> expectedList = vi;
     std::sort(expectedList.begin(), expectedList.end());
-    MergeSort msort;
+    MergeSort<int> msort;
     msort.Sort(vi);
     EXPECT_EQ(expectedList, vi);
 }

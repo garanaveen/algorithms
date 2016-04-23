@@ -1,19 +1,3 @@
-#include "InsertionSort.h"
-#include <algorithm>
+//Empty file. Is there a way to completely delete InsertionSort.cpp
 
-using namespace std;
-
-void InsertionSort::Sort(vector<int> &list)
-{
-    int length = list.size();
-
-    for(int i = 1; i < length ; i++)
-        for(int j = i; j> 0; j--)
-            if(list[j] < list[j-1]){
-                 int tmp = list[j-1];
-                 list[j-1] = list[j];
-                 list[j] = tmp;
-            }
-    return;
-}
-
+//There is no implementation here. Everything is in .h file
