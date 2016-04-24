@@ -29,21 +29,13 @@ protected:
   virtual ~SortTest()
   {}
 
-  virtual void SetUp()
-  {}
-
-  virtual void TearDown()
-  {
-    vi.clear();
-  }
-
-  void BuildVectorOfOfTwoElements()
+  void BuildVectorOfOfTwoElements(vector<int>& vi)
   {
     vi.push_back(2);
     vi.push_back(1);
   }
 
-  void BuildVectorOfOfFourElements()
+  void BuildVectorOfOfFourElements(vector<int>& vi)
   {
     vi.push_back(3);
     vi.push_back(4);
@@ -51,7 +43,7 @@ protected:
     vi.push_back(2);
   }
 
-  void BuildVectorOfManyElements()
+  void BuildVectorOfManyElements(vector<int>& vi)
   {
     for (int i = 0; i < 100; i++)
     {
@@ -59,13 +51,20 @@ protected:
     }
   }
 
-  vector<int> vi;
+  void BuildVectorOfManyDoubles(vector<double>& vd)
+  {
+    for (int i = 0; i < 100; i++)
+    {
+      vd.push_back(rand());
+    }
+  }
 };
 }
 
 TEST_F(SortTest, InsertionSortTwoElements)
 {
-  BuildVectorOfOfTwoElements();
+  vector<int> vi;
+  BuildVectorOfOfTwoElements(vi);
   InsertionSort<int> isort;
   isort.Sort(vi);
   EXPECT_EQ(1, vi.at(0));
@@ -74,7 +73,8 @@ TEST_F(SortTest, InsertionSortTwoElements)
 
 TEST_F(SortTest, InsertionSortManyElements)
 {
-  BuildVectorOfManyElements();
+  vector<int> vi;
+  BuildVectorOfManyElements(vi);
   vector<int> expectedList = vi;
   std::sort(expectedList.begin(), expectedList.end());
   InsertionSort<int> isort;
@@ -84,7 +84,8 @@ TEST_F(SortTest, InsertionSortManyElements)
 
 TEST_F(SortTest, MergeSortTwoElements)
 {
-  BuildVectorOfOfTwoElements();
+  vector<int> vi;
+  BuildVectorOfOfTwoElements(vi);
   MergeSort<int> msort;
   msort.Sort(vi);
   EXPECT_EQ(1, vi.at(0));
@@ -93,22 +94,34 @@ TEST_F(SortTest, MergeSortTwoElements)
 
 TEST_F(SortTest, MergeSortFourElements)
 {
-  BuildVectorOfOfFourElements();
+  vector<int> vi;
+  BuildVectorOfOfFourElements(vi);
   MergeSort<int> msort;
   msort.Sort(vi);
   EXPECT_EQ(1, vi.at(0));
   EXPECT_EQ(2, vi.at(1));
 }
 
-
 TEST_F(SortTest, MergeSortManyElements)
 {
-  BuildVectorOfManyElements();
+  vector<int> vi;
+  BuildVectorOfManyElements(vi);
   vector<int> expectedList = vi;
   std::sort(expectedList.begin(), expectedList.end());
   MergeSort<int> msort;
   msort.Sort(vi);
   EXPECT_EQ(expectedList, vi);
+}
+
+TEST_F(SortTest, MergeSortForDoubles)
+{
+  vector<double> vd;
+  BuildVectorOfManyDoubles(vd);
+  vector<double> expectedList = vd;
+  std::sort(expectedList.begin(), expectedList.end());
+  MergeSort<double> msort;
+  msort.Sort(vd);
+  EXPECT_EQ(expectedList, vd);
 }
 
 int main(int argc, char **argv)
