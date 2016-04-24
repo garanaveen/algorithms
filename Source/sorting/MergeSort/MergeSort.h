@@ -34,7 +34,7 @@ private:
   void Merge(vector<T>& list, int start, int mid, int end)
   {
     vector<T> leftHalf(list.begin() + start, list.begin() + mid + 1);
-    leftHalf.push_back(INT_MAX);
+    leftHalf.push_back(INT_MAX);//TODO : This works only for ints. Need to change this concept of infinity!!
     vector<T> rightHalf(list.begin() + mid + 1, list.begin() + end + 1);
     rightHalf.push_back(INT_MAX);
     int leftIndex  = 0;
