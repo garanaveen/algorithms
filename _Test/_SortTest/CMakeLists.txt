@@ -7,6 +7,7 @@ add_executable(${PROJECT_NAME} ${SRC_LIST})
 SET (PROJECT_DEPEND
 InsertionSort
 MergeSort
+QuickSort
 )
 
 add_dependencies(${PROJECT_NAME} ${PROJECT_DEPEND})
