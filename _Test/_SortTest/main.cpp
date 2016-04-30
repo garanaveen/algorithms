@@ -6,9 +6,9 @@
 
 #include <vector>
 #include <stdlib.h>
-#include <sorting/InsertionSort/InsertionSort.h>
-#include <sorting/MergeSort/MergeSort.h>
-#include <sorting/QuickSort/QuickSort.h>
+#include <Sorting/InsertionSort/InsertionSort.h>
+#include <Sorting/MergeSort/MergeSort.h>
+#include <Sorting/QuickSort/QuickSort.h>
 
 #include <gtest/gtest.h>
 #include <algorithm>

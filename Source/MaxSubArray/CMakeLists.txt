@@ -1,9 +1,9 @@
-project(InsertionSort)
+project(MaxSubArray)
 cmake_minimum_required(VERSION 2.8)
 
 SET (SRC_LIST
-InsertionSort.cpp
-InsertionSort.h
+MaxSubArray.cpp
+MaxSubArray.h
 )
 
 add_library(${PROJECT_NAME} SHARED ${SRC_LIST})
