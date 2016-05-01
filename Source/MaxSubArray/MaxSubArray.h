@@ -4,13 +4,13 @@
 #include <vector>
 using namespace std;
 
-template<class T>
 class MaxSubArray {
 public:
-    void FindMaxSubArray();
+    int FindMaxSubArray(const vector<int> &vi);
 
 private:
-    void FindMaxCrossingSubArray();
+    int FindMaxSubArray(const vector<int> &vi, const int& low, const int &high, int& max_low, int& max_high);
+    int FindMaxCrossingSubArray(const vector<int> &vi, const int &low, const int &mid, const int &high);
 };
 
-#endif // MAX_SUB_ARRAY_H
+#endif //MAX_SUB_ARRAY_H
