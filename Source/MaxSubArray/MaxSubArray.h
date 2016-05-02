@@ -6,10 +6,11 @@ using namespace std;
 
 class MaxSubArray {
 public:
-    int FindMaxSubArray(const vector<int> &vi);
+    int FindMaxSubArray(const vector<int> &vi, bool contigious = true);
 
 private:
-    int FindMaxSubArray(const vector<int> &vi, const int& low, const int &high, int& max_low, int& max_high);
+    int FindMaxNonContigiousSubArray(const vector<int> &vi);
+    int FindMaxContigiousSubArray(const vector<int> &vi, const int& low, const int &high);
     int FindMaxCrossingSubArray(const vector<int> &vi, const int &low, const int &mid, const int &high);
 };
 

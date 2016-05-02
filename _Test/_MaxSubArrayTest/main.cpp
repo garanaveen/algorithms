@@ -41,14 +41,27 @@ TEST_F(MaxSubArrayTest, AllPositives)
   vi.push_back(2);
   vi.push_back(3);
   vi.push_back(4);
-    //1 2 3 4
+  vi.push_back(5);
+    //1 2 3 4 5
 
   MaxSubArray msa;
-  int start = -1;
-  int end = -1;
-  msa.FindMaxSubArray(vi, start, end);
-  EXPECT_EQ(0, start);
-  EXPECT_EQ(3, end);
+  int maxContiguousSum = msa.FindMaxSubArray(vi);
+  int maxNonContiguousSum = msa.FindMaxSubArray(vi, false);
+  EXPECT_EQ(15, maxContiguousSum);
+  EXPECT_EQ(15, maxNonContiguousSum);
+}
+
+TEST_F(MaxSubArrayTest, AllNegative)
+{
+    vector<int> vi;
+    vi.push_back(-100);
+    vi.push_back(-1);
+
+    MaxSubArray msa;
+    int maxContigiousSum = msa.FindMaxSubArray(vi);
+    int maxNonContiguousSum = msa.FindMaxSubArray(vi, false);
+    EXPECT_EQ(-1, maxContigiousSum);
+    EXPECT_EQ(-1, maxNonContiguousSum);
 }
 
 TEST_F(MaxSubArrayTest, PositiveAndNegative)
@@ -63,11 +76,10 @@ TEST_F(MaxSubArrayTest, PositiveAndNegative)
 //  2 -1 2 3 4 -5
 
   MaxSubArray msa;
-  int start = -1;
-  int end = -1;
-  msa.FindMaxSubArray(vi, start, end);
-  EXPECT_EQ(0, start);
-  EXPECT_EQ(4, end);
+  int maxContigiousSum = msa.FindMaxSubArray(vi);
+  int maxNonContiguousSum = msa.FindMaxSubArray(vi, false);
+  EXPECT_EQ(10, maxContigiousSum);
+  EXPECT_EQ(11, maxNonContiguousSum);
 }
 
 
