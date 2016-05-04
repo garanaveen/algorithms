@@ -2,6 +2,10 @@
 #include "MaxSubArray.h"
 #include <limits.h>
 
+//100000000 569099406 1607140150 823906344
+//31
+//https://www.hackerrank.com/challenges/bitset-1
+
 int MaxSubArray::FindMaxNonContigiousSubArray(const vector<int> &vi)
 {
     int nonContigiousPositiveSum = 0;

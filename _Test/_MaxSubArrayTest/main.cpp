@@ -13,6 +13,11 @@
 
 using namespace std;
 
+/*
+ * https://www.hackerrank.com/challenges/maxsubarray
+ * https://www.hackerrank.com/challenges/maxsubarray/submissions/code/20003555
+ *
+*/
 
 namespace {
 class MaxSubArrayTest : public ::testing::Test {
@@ -73,7 +78,6 @@ TEST_F(MaxSubArrayTest, PositiveAndNegative)
   vi.push_back(3);
   vi.push_back(4);
   vi.push_back(-5);
-//  2 -1 2 3 4 -5
 
   MaxSubArray msa;
   int maxContigiousSum = msa.FindMaxSubArray(vi);
