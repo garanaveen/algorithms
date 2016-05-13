@@ -20,9 +20,9 @@ private:
    void SortFromMaxHeap();
    void ExtractMaxNode();
 
-   inline int Parent(int i) {return i/2;}
-   inline int LeftChild(int i) {return i*2;}
-   inline int RightChild(int i) {return i*2+1;}
+   inline int Parent(int i) {return (i+1)/2-1;}
+   inline int LeftChild(int i) {return (i+1)*2-1;}
+   inline int RightChild(int i) {return (i+1)*2;}
 };
 
 #endif //HEAP_SORT_H
