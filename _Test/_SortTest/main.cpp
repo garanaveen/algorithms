@@ -9,6 +9,7 @@
 #include <Sorting/InsertionSort/InsertionSort.h>
 #include <Sorting/MergeSort/MergeSort.h>
 #include <Sorting/QuickSort/QuickSort.h>
+#include <Sorting/HeapSort/HeapSort.h>
 
 #include <gtest/gtest.h>
 #include <algorithm>
@@ -44,11 +45,23 @@ protected:
     vi.push_back(2);
   }
 
-  void BuildVectorOfManyElements(vector<int>& vi)
+  void BuildVectorOfOfSevenElements(vector<int>& vi)
+  {
+   vi.push_back(1);
+   vi.push_back(2);
+   vi.push_back(3);
+   vi.push_back(4);
+
+   vi.push_back(5);
+   vi.push_back(6);
+   vi.push_back(7);
+  }
+
+  void BuildVectorOfManyElements(vector<int>& vi, int max = 1000)
   {
     for (int i = 0; i < 100; i++)
     {
-      vi.push_back(rand());
+      vi.push_back(rand() % max);
     }
   }
 
@@ -147,6 +160,28 @@ TEST_F(SortTest, QuickSortManyElements)
   std::sort(expectedList.begin(), expectedList.end());
   QuickSort qsort;
   qsort.Sort(vi);
+  EXPECT_EQ(expectedList, vi);
+}
+
+TEST_F(SortTest, HeapSortHeight2)
+{
+  vector<int> vi;
+  BuildVectorOfOfSevenElements(vi);
+  HeapSort hsort(vi);
+  hsort.Sort();
+  vector<int> expectedList = vi;
+  std::sort(expectedList.begin(), expectedList.end());
+  EXPECT_EQ(expectedList, vi);
+}
+
+TEST_F(SortTest, HeapSortManyElements)
+{
+  vector<int> vi;
+  BuildVectorOfManyElements(vi);
+  vector<int> expectedList = vi;
+  std::sort(expectedList.begin(), expectedList.end());
+  HeapSort hsort(vi);
+  hsort.Sort();
   EXPECT_EQ(expectedList, vi);
 }
 

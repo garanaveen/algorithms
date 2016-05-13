@@ -8,6 +8,7 @@ SET (PROJECT_DEPEND
 InsertionSort
 MergeSort
 QuickSort
+HeapSort
 )
 
 add_dependencies(${PROJECT_NAME} ${PROJECT_DEPEND})
