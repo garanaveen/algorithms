@@ -1,7 +1,7 @@
 #include "HeapSort.h"
 #include <iostream>
-//#include <algorithm>
 
+//https://www.hackerrank.com/contests/hw1/challenges/heap-sort
 
 using namespace std;
 
@@ -78,7 +78,6 @@ void HeapSort::BuildMaxHeap()
 
 void HeapSort::Sort()
 {
-//   std::sort(List->begin(), List->end());
    BuildMaxHeap();
    SortFromMaxHeap();
 }
