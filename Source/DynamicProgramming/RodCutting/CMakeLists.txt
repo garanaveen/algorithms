@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 2.8)
+
+project(RodCutting)
+
+SET (SRC_LIST
+RodCutting.cpp
+RodCutting.h
+)
+
+add_library(${PROJECT_NAME} SHARED ${SRC_LIST})
+
+INSTALL(
+TARGETS ${PROJECT_NAME}
+ARCHIVE DESTINATION lib
+LIBRARY DESTINATION lib
+RUNTIME DESTINATION bin
+COMPONENT ${PROJECT_NAME}
+)
