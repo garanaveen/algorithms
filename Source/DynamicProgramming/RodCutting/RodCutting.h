@@ -4,16 +4,23 @@
 #include <vector>
 #include <map>
 
+typedef int RodLength;
+typedef int RodPrice;
+
 using namespace std;
 
 class RodCutting
 {
 public:
-    int Cut(int rodSize);
-    void SetPriceTable(const vector<pair<int, int> >& priceTable);
+    //Returns the length of the first cut.
+    int FirstCut(int rodSize);
 
+    //Set the price table
+    void SetPriceTable(const vector<pair<RodLength, RodPrice> >& priceTable);
+
+    void FitzBuzz();
 private:
-    map<int, int> PriceTable;
+    map<RodLength, RodPrice> PriceTable;
 };
 
 #endif
