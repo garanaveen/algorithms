@@ -6,6 +6,8 @@ SET (SRC_LIST
 main.cpp
 )
 
+add_executable(${PROJECT_NAME} ${SRC_LIST})
+
 SET ( PROJECT_DEPEND
 RodCutting
 )
