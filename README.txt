@@ -15,3 +15,8 @@ C:\Tools\uncrustify\
 
 cfg file for cpp -> C:\Users\milkyway\uncrustify.cfg
 Added uncrustify.cfg to the repository.
+
+
+
+Instruction on mac,
+after clone, create build directory at the root and run "cmake ../" followed by make to generate _SampleAppTest in build directory.
