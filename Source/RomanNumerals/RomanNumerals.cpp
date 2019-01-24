@@ -7,5 +7,19 @@ using namespace std;
 
 std::string RomanNumerals::Convert(int arabicNumber)
 {
-   return "I";
+    std::string romanString;
+    int unitPlace = arabicNumber % 10;
+
+    if(unitPlace <= 3)
+    {
+	while(unitPlace--)
+	{
+	    romanString += "I";
+	    arabicNumber--;
+	}
+    }
+
+    return romanString;
 }
+
+
