@@ -9,3 +9,4 @@ cmake_minimum_required(VERSION 2.8)
 
 add_subdirectory(SampleApp)
 add_subdirectory(RomanNumerals)
+add_subdirectory(CPlusPlus)
