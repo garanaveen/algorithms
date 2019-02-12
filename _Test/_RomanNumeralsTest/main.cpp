@@ -26,12 +26,17 @@ protected:
 };
 }
 
-TEST_F(RomanNumeralsTest, SampleFunctionReturnsZero)
+TEST_F(RomanNumeralsTest, OneReturnsSingleI)
 {
   RomanNumerals bs;
   EXPECT_EQ("I", bs.Convert(1));
 }
 
+TEST_F(RomanNumeralsTest, ThreeReturnsThreeIs)
+{
+  RomanNumerals bs;
+  EXPECT_EQ("III", bs.Convert(3));
+}
 
 int main(int argc, char **argv)
 {
