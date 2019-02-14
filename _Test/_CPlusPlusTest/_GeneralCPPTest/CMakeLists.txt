@@ -1,11 +1,11 @@
-project(_MoveConstructorTest)
+project(_GeneralCPPTest)
 cmake_minimum_required(VERSION 2.8)
 aux_source_directory(. SRC_LIST)
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})
 
 SET (PROJECT_DEPEND
-MoveConstructor
+GeneralCPP
 )
 
 add_dependencies(${PROJECT_NAME} ${PROJECT_DEPEND})

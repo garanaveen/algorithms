@@ -1,21 +1,21 @@
-#include <MoveConstructor/MoveConstructor.h>
+#include <GeneralCPP/GeneralCPP.h>
 #include <gtest/gtest.h>
 
 using namespace std;
 namespace {
-class MoveConstructorTest : public ::testing::Test {
+class GeneralCPPTest : public ::testing::Test {
 protected:
 
-  MoveConstructorTest()
+  GeneralCPPTest()
   {}
 
-  virtual ~MoveConstructorTest()
+  virtual ~GeneralCPPTest()
   {}
 
 };
 }
 
-TEST_F(MoveConstructorTest, OneEquals1)
+TEST_F(GeneralCPPTest, OneEquals1)
 {
   EXPECT_EQ(1, 2-1);
 }

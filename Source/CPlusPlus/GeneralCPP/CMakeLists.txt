@@ -1,9 +1,9 @@
-project(MoveConstructor)
+project(GeneralCPP)
 cmake_minimum_required(VERSION 2.8)
 
 SET (SRC_LIST
-MoveConstructor.cpp
-MoveConstructor.h
+GeneralCPP.cpp
+GeneralCPP.h
 )
 
 add_library(${PROJECT_NAME} SHARED ${SRC_LIST})

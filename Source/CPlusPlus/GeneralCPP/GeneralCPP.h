@@ -1,6 +1,6 @@
 #pragma once
 
-class MoveConstructor {
+class GeneralCPP {
 public:
     int Function();
 };
