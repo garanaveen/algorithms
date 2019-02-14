@@ -2,6 +2,7 @@
 
 class GeneralCPP {
 public:
-    int Function();
+    int FunctionWithStdOut();
+    int FunctionWithStdErr();
 };
 

@@ -12,12 +12,15 @@ protected:
   virtual ~GeneralCPPTest()
   {}
 
+  GeneralCPP TestObj;
+
 };
 }
 
-TEST_F(GeneralCPPTest, OneEquals1)
+TEST_F(GeneralCPPTest, CallingFunctionsShouldWork)
 {
-  EXPECT_EQ(1, 2-1);
+    TestObj.FunctionWithStdErr();
+    TestObj.FunctionWithStdOut();
 }
 
 int main(int argc, char **argv)

@@ -2,7 +2,12 @@
 #include "GeneralCPP.h"
 #include <iostream>
 
-int GeneralCPP::Function()
+int GeneralCPP::FunctionWithStdOut()
 {
-   std::cout << "GeneralCPP::Function()" << std::endl;
+   std::cout << "GeneralCPP::FunctionWithStdOut()" << std::endl;
+}
+
+int GeneralCPP::FunctionWithStdErr()
+{
+   std::cerr << "GeneralCPP::FunctionWithStdErr()" << std::endl;
 }
