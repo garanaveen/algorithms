@@ -1,3 +1,8 @@
-Reorg the directories such that unit tests are included inside the actual component.
-Current : _Test/_SampleAppTest and Source/SampleApp.
-Intended : Source/SampleApp/_unit with actual source in Source/SampleApp/
+Create a directory called algorithms and move all the algorithms to that directory.
+Top level directories should be
+Algorithms
+HackerRank
+CodeKatas
+CPlusPlus
+
+
