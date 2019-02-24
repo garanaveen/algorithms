@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 add_subdirectory(Sorting)
+add_subdirectory(Sorting/_unit)
 add_subdirectory(MaxSubArray)
 add_subdirectory(MaxSubArray/_unit)
 add_subdirectory(BitSet)
