@@ -18,4 +18,3 @@ INCLUDE_DIRECTORIES("${TOP_LEVEL_PROJECT_SOURCE}/Source")
 INCLUDE_DIRECTORIES("${GTEST_INCLUDE_DIR}")
 
 add_subdirectory(Source)
-add_subdirectory(_Test)
