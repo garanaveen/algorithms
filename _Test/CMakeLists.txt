@@ -8,3 +8,4 @@ add_subdirectory(_RomanNumeralsTest)
 add_subdirectory(_SampleAppTest)
 add_subdirectory(_CPlusPlusTest)
 
+add_subdirectory(_CodeKatasTest)

@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 2.8)
 
 set(TOP_LEVEL_PROJECT_SOURCE ${PROJECT_SOURCE_DIR})
 
+add_definitions(-std=c++11) 
+
 #Right now both binaries and libraries are put to build directory
 #TODO - Seperate them if possible
 set (CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
