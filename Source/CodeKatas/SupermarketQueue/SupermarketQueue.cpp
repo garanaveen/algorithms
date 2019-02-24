@@ -20,14 +20,14 @@ void SupermarketQueue::InsertToQueue(int i)
 {
     //Insert in to CurrentQueue;
     std::vector<int>::iterator min = std::min_element(CurrentQueueStatus.begin(), CurrentQueueStatus.end()); 
-    std::cout << "i:" << i << ", min : " << *min << std::endl;
+    //    std::cout << "i:" << i << ", min : " << *min << std::endl;
     *min += i;
 }
 
 int SupermarketQueue::CalculateTime(const std::vector<int>& queue, int numberOfQueues)
 {
     InitializeCurrentQueue(numberOfQueues);
-    std::cout << "vector-size : " << CurrentQueueStatus.size() << std::endl;
+    //    std::cout << "vector-size : " << CurrentQueueStatus.size() << std::endl;
 
     int queueTime = 0 ;
     for (auto i : queue)
@@ -38,6 +38,6 @@ int SupermarketQueue::CalculateTime(const std::vector<int>& queue, int numberOfQ
     }
 
     std::vector<int>::iterator max = std::max_element(CurrentQueueStatus.begin(), CurrentQueueStatus.end()); 
-    std::cout << "max : " << *max;
+    //    std::cout << "max : " << *max;
     return *max;
 }
