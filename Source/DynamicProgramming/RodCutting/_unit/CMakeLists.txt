@@ -1,6 +1,6 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 
-project(_TestRodCutting)
+project(_RodCuttingTest)
 
 SET (SRC_LIST
 main.cpp
