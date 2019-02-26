@@ -1,9 +1,3 @@
-#define NOMINMAX
-
-#ifdef _WIN32
-# include <windows.h>
-#endif // ifdef _WIN32
-
 #include <vector>
 #include <stdlib.h>
 #include <SampleApp/SampleApp.h>

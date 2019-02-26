@@ -6,12 +6,12 @@
 void HeapSort::PrintList(int i)
 {
    std::vector<int>::iterator it = List->begin();
-   cout << i << " - ";
+   std::cout << i << " - ";
    for(; it != List->end(); it++)
    {
-      cout << *it << " ";
+      std::cout << *it << " ";
    }
-   cout <<endl;
+   std::cout << std::endl;
 }
 
 void HeapSort::ExtractMaxNode()
@@ -21,7 +21,7 @@ void HeapSort::ExtractMaxNode()
    List->at(0) = temp;
 
    HeapSize--;
-//      cout << HeapSize << ":";
+//      std::cout << HeapSize << ":";
 
    MaxifyNode(0);
 }
@@ -57,7 +57,7 @@ void HeapSort::MaxifyNode(int i)
 
 void HeapSort::SortFromMaxHeap()
 {
-//   cout << "SortFromMaxHeap" << endl;
+//   std::cout << "SortFromMaxHeap" << endl;
    int initialHeapSize = HeapSize;
    while(HeapSize >= 1)
    {
