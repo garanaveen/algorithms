@@ -1,14 +1,12 @@
-#ifndef INSERTION_SORT_H
-#define INSERTION_SORT_H
+#pragma once
 
 #include <vector>
-using namespace std;
 
 template<class T>
 class InsertionSort {
 public:
 
-  void Sort(vector<T>& list)
+  void Sort(std::vector<T>& list)
   {
     int length = list.size();
 
@@ -22,4 +20,3 @@ public:
   }
 };
 
-#endif // INSERTION_SORT_H

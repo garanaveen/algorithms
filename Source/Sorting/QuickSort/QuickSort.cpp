@@ -1,13 +1,11 @@
 #include "QuickSort.h"
 
-using namespace std;
-
-void QuickSort::Sort(vector<int> &v)
+void QuickSort::Sort(std::vector<int> &v)
 {
     Sort(v, 0, v.size()-1);
 }
 
-void QuickSort::Sort(vector<int> &v, int start, int end)
+void QuickSort::Sort(std::vector<int> &v, int start, int end)
 {
     if(start < end)
     {
@@ -17,7 +15,7 @@ void QuickSort::Sort(vector<int> &v, int start, int end)
     }
 }
 
-int QuickSort::Partition(vector<int> &v, int start, int end)
+int QuickSort::Partition(std::vector<int> &v, int start, int end)
 {
     int i = start;
     int pivotValue = v[end];

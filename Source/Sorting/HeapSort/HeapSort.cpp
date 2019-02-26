@@ -3,11 +3,9 @@
 
 //https://www.hackerrank.com/contests/hw1/challenges/heap-sort
 
-using namespace std;
-
 void HeapSort::PrintList(int i)
 {
-   vector<int>::iterator it = List->begin();
+   std::vector<int>::iterator it = List->begin();
    cout << i << " - ";
    for(; it != List->end(); it++)
    {
@@ -82,7 +80,7 @@ void HeapSort::Sort()
    SortFromMaxHeap();
 }
 
-HeapSort::HeapSort(vector<int>& v)
+HeapSort::HeapSort(std::vector<int>& v)
    :List(&v),
    HeapSize(v.size())
 {

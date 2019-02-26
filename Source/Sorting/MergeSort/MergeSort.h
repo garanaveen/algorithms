@@ -1,16 +1,13 @@
-#ifndef MERGESORT_H
-#define MERGESORT_H
+#pragma once
 #include <vector>
 #include <limits.h>
 #include <algorithm>
-
-using namespace std;
 
 template<class T>
 class MergeSort {
 public:
 
-  void Sort(vector<T>& list)
+  void Sort(std::vector<T>& list)
   {
     // Index Ex. 0,1, 2,3, 4,5, 6,7
     // Value Ex. 3,4, 1,2, 9,8, 7,6
@@ -19,7 +16,7 @@ public:
 
 private:
 
-  void DivideAndSort(vector<T>& list, int start, int end)
+  void DivideAndSort(std::vector<T>& list, int start, int end)
   {
     int mid = (start + end) / 2;
 
@@ -31,11 +28,11 @@ private:
     }
   }
 
-  void Merge(vector<T>& list, int start, int mid, int end)
+  void Merge(std::vector<T>& list, int start, int mid, int end)
   {
-    vector<T> leftHalf(list.begin() + start, list.begin() + mid + 1);
+    std::vector<T> leftHalf(list.begin() + start, list.begin() + mid + 1);
     leftHalf.push_back(INT_MAX);//TODO : This works only for ints. Need to change this concept of infinity!!
-    vector<T> rightHalf(list.begin() + mid + 1, list.begin() + end + 1);
+    std::vector<T> rightHalf(list.begin() + mid + 1, list.begin() + end + 1);
     rightHalf.push_back(INT_MAX);
     int leftIndex  = 0;
     int leftSize   = leftHalf.size();
@@ -50,4 +47,3 @@ private:
   }
 };
 
-#endif // MERGESORT_H

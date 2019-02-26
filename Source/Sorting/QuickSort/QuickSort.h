@@ -1,17 +1,13 @@
-#ifndef QUICK_SORT_H
-#define QUICK_SORT_H
+#pragma once
 
 #include <vector>
 
-using namespace std;
-
 class QuickSort{
 public:
-    void Sort(vector<int>& v);
+    void Sort(std::vector<int>& v);
 
 private:
-    int Partition(vector<int>& v, int start, int end);
-    void Sort(vector<int> &v, int start, int end);
+    int Partition(std::vector<int>& v, int start, int end);
+    void Sort(std::vector<int> &v, int start, int end);
 };
 
-#endif //QUICK_SORT_H

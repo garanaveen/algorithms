@@ -14,8 +14,6 @@
 #include <gtest/gtest.h>
 #include <algorithm>
 
-using namespace std;
-
 // Useful links.
 // https://github.com/google/googletest
 // https://github.com/google/googletest/blob/master/googletest/docs/Primer.md
@@ -31,13 +29,13 @@ protected:
   virtual ~SortTest()
   {}
 
-  void BuildVectorOfOfTwoElements(vector<int>& vi)
+  void BuildVectorOfOfTwoElements(std::vector<int>& vi)
   {
     vi.push_back(2);
     vi.push_back(1);
   }
 
-  void BuildVectorOfOfFourElements(vector<int>& vi)
+  void BuildVectorOfOfFourElements(std::vector<int>& vi)
   {
     vi.push_back(3);
     vi.push_back(4);
@@ -45,7 +43,7 @@ protected:
     vi.push_back(2);
   }
 
-  void BuildVectorOfOfSevenElements(vector<int>& vi)
+  void BuildVectorOfOfSevenElements(std::vector<int>& vi)
   {
    vi.push_back(1);
    vi.push_back(2);
@@ -57,7 +55,7 @@ protected:
    vi.push_back(7);
   }
 
-  void BuildVectorOfManyElements(vector<int>& vi, int max = 1000)
+  void BuildVectorOfManyElements(std::vector<int>& vi, int max = 1000)
   {
     for (int i = 0; i < 100; i++)
     {
@@ -65,7 +63,7 @@ protected:
     }
   }
 
-  void BuildVectorOfManyDoubles(vector<double>& vd)
+  void BuildVectorOfManyDoubles(std::vector<double>& vd)
   {
     for (int i = 0; i < 100; i++)
     {
@@ -77,7 +75,7 @@ protected:
 
 TEST_F(SortTest, InsertionSortTwoElements)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   BuildVectorOfOfTwoElements(vi);
   InsertionSort<int> isort;
   isort.Sort(vi);
@@ -87,9 +85,9 @@ TEST_F(SortTest, InsertionSortTwoElements)
 
 TEST_F(SortTest, InsertionSortManyElements)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   BuildVectorOfManyElements(vi);
-  vector<int> expectedList = vi;
+  std::vector<int> expectedList = vi;
   std::sort(expectedList.begin(), expectedList.end());
   InsertionSort<int> isort;
   isort.Sort(vi);
@@ -98,7 +96,7 @@ TEST_F(SortTest, InsertionSortManyElements)
 
 TEST_F(SortTest, MergeSortTwoElements)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   BuildVectorOfOfTwoElements(vi);
   MergeSort<int> msort;
   msort.Sort(vi);
@@ -108,7 +106,7 @@ TEST_F(SortTest, MergeSortTwoElements)
 
 TEST_F(SortTest, MergeSortFourElements)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   BuildVectorOfOfFourElements(vi);
   MergeSort<int> msort;
   msort.Sort(vi);
@@ -120,9 +118,9 @@ TEST_F(SortTest, MergeSortFourElements)
 
 TEST_F(SortTest, MergeSortManyElements)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   BuildVectorOfManyElements(vi);
-  vector<int> expectedList = vi;
+  std::vector<int> expectedList = vi;
   std::sort(expectedList.begin(), expectedList.end());
   MergeSort<int> msort;
   msort.Sort(vi);
@@ -131,9 +129,9 @@ TEST_F(SortTest, MergeSortManyElements)
 
 TEST_F(SortTest, MergeSortForDoubles)
 {
-  vector<double> vd;
+  std::vector<double> vd;
   BuildVectorOfManyDoubles(vd);
-  vector<double> expectedList = vd;
+  std::vector<double> expectedList = vd;
   std::sort(expectedList.begin(), expectedList.end());
   MergeSort<double> msort;
   msort.Sort(vd);
@@ -142,8 +140,9 @@ TEST_F(SortTest, MergeSortForDoubles)
 
 TEST_F(SortTest, QuickSortFourElements)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   BuildVectorOfOfFourElements(vi);
+  
   QuickSort qsort;
   qsort.Sort(vi);
   EXPECT_EQ(1, vi.at(0));
@@ -154,9 +153,9 @@ TEST_F(SortTest, QuickSortFourElements)
 
 TEST_F(SortTest, QuickSortManyElements)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   BuildVectorOfManyElements(vi);
-  vector<int> expectedList = vi;
+  std::vector<int> expectedList = vi;
   std::sort(expectedList.begin(), expectedList.end());
   QuickSort qsort;
   qsort.Sort(vi);
@@ -165,20 +164,20 @@ TEST_F(SortTest, QuickSortManyElements)
 
 TEST_F(SortTest, HeapSortHeight2)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   BuildVectorOfOfSevenElements(vi);
   HeapSort hsort(vi);
   hsort.Sort();
-  vector<int> expectedList = vi;
+  std::vector<int> expectedList = vi;
   std::sort(expectedList.begin(), expectedList.end());
   EXPECT_EQ(expectedList, vi);
 }
 
 TEST_F(SortTest, HeapSortManyElements)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   BuildVectorOfManyElements(vi);
-  vector<int> expectedList = vi;
+  std::vector<int> expectedList = vi;
   std::sort(expectedList.begin(), expectedList.end());
   HeapSort hsort(vi);
   hsort.Sort();
