@@ -1,4 +1,5 @@
 #include <GeneralCPP/GeneralCPP.h>
+#include <GeneralCPP/TestConstExpr.h>
 #include <gtest/gtest.h>
 
 using namespace std;
@@ -13,14 +14,17 @@ protected:
   {}
 
   GeneralCPP TestObj;
+  TestConstExpr::TestClass ConstExprObj;
 
 };
 }
 
 TEST_F(GeneralCPPTest, CallingFunctionsShouldWork)
 {
+    std::cout << sizeof(TestObj);
     TestObj.FunctionWithStdErr();
     TestObj.FunctionWithStdOut();
+    ConstExprObj.SomeFunction();
 }
 
 int main(int argc, char **argv)

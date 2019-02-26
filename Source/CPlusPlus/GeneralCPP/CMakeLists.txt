@@ -4,6 +4,8 @@ cmake_minimum_required(VERSION 2.8)
 SET (SRC_LIST
 GeneralCPP.cpp
 GeneralCPP.h
+TestConstExpr.h
+TestConstExpr.cpp
 )
 
 add_library(${PROJECT_NAME} SHARED ${SRC_LIST})
