@@ -8,13 +8,13 @@
 namespace TestConstExpr
 {
     constexpr const char* TIME_FORMAT = "yyyy-MM-dd hh:mm:ss";
-    constexpr const int TIME_FORMAT_SIZE = strlen(TIME_FORMAT) + 1;
+//    constexpr const int TIME_FORMAT_SIZE = strlen(TIME_FORMAT) + 1;
 
     class TestClass
     {
 	public:
 	    int SomeFunction();
 	private:
-	    char arr[TIME_FORMAT_SIZE];
+//	    char arr[TIME_FORMAT_SIZE];
     };
 }
