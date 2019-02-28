@@ -19,4 +19,4 @@ Added uncrustify.cfg to the repository.
 
 
 Instruction on mac,
-after clone, create build directory at the root and run "cmake ../" followed by make to generate _SampleAppTest in build directory.
+after clone, create build directory at the root of source directory and run "cmake ../" followed by make to generate _SampleAppTest in build directory.
