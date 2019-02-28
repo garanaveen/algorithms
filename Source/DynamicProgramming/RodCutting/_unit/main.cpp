@@ -3,8 +3,6 @@
 #include<vector>
 #include <gtest/gtest.h>
 
-using namespace std;
-
 class RodCuttingTest : public ::testing::Test
 {
 protected:
@@ -14,20 +12,19 @@ protected:
     {}
 };
 
-
 //TODO::Failing test
 TEST_F(RodCuttingTest, Test1)
 {
     RodCutting rc;
-    vector<pair<int, int> > priceTable;
-    priceTable.push_back(make_pair(1,1));
-    priceTable.push_back(make_pair(2,5));
-    priceTable.push_back(make_pair(3,8));
-    priceTable.push_back(make_pair(4,9));
-    priceTable.push_back(make_pair(5,10));
-    priceTable.push_back(make_pair(6,17));
-    priceTable.push_back(make_pair(7,17));
-    priceTable.push_back(make_pair(8,20));
+    std::vector<std::pair<int, int> > priceTable;
+    priceTable.push_back(std::make_pair(1,1));
+    priceTable.push_back(std::make_pair(2,5));
+    priceTable.push_back(std::make_pair(3,8));
+    priceTable.push_back(std::make_pair(4,9));
+    priceTable.push_back(std::make_pair(5,10));
+    priceTable.push_back(std::make_pair(6,17));
+    priceTable.push_back(std::make_pair(7,17));
+    priceTable.push_back(std::make_pair(8,20));
 
     rc.SetPriceTable(priceTable);
     EXPECT_EQ(0, rc.FirstCut(0));

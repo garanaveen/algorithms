@@ -11,8 +11,6 @@
 #include <gtest/gtest.h>
 #include <algorithm>
 
-using namespace std;
-
 namespace {
 class RomanNumeralsTest : public ::testing::Test {
 protected:

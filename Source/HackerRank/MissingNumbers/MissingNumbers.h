@@ -3,8 +3,6 @@
 
 #include <vector>
 
-using namespace std;
-
 
 #endif //MISSING_NUMBER_H
 

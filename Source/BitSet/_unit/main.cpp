@@ -11,8 +11,6 @@
 #include <gtest/gtest.h>
 #include <algorithm>
 
-using namespace std;
-
 //https://www.hackerrank.com/challenges/bitset-1
 //https://www.hackerrank.com/challenges/bitset-1/submissions/code/20097190
 //http://ideone.com/i4Syuw

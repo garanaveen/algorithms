@@ -2,7 +2,6 @@
 #include<iostream>
 #include <vector>
 #include <map>
-using namespace std;
 
 unsigned int BitSet::GenerateUniqueNumbers(unsigned int N, unsigned int S, unsigned int P, unsigned int Q)
 {
@@ -11,7 +10,7 @@ unsigned int BitSet::GenerateUniqueNumbers(unsigned int N, unsigned int S, unsig
     int i = 1;
     for (; i < N ; i++){
         currentValue = (previousValue*P+Q) & 0x7FFFFFFF;
-        //cout << currentValue <<endl;
+        //std::cout << currentValue << std::endl;
         if(currentValue == previousValue)
         {
             break;

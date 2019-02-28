@@ -2,7 +2,6 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
 
 //R10 = MAX[P10, R1+P9, R2+P8, R3+P7, R4+P6, R5+P5, R6+P4, R7+P3, R8+P2, R9+P1]
 //R9 = MAX[P9, R1+P8, R2+P7, R3+P6, R4+P5, R5+P4, R6+P3, R7+P2, R8+P1]
@@ -20,9 +19,9 @@ int RodCutting::FirstCut(int rodSize)
     return rodSize;
 }
 
-void RodCutting::SetPriceTable(const vector<pair<RodLength, RodPrice> >& priceTable)
+void RodCutting::SetPriceTable(const std::vector<std::pair<RodLength, RodPrice> >& priceTable)
 {
-    vector<pair<int, int> >::const_iterator it = priceTable.begin();
+    std::vector<std::pair<int, int> >::const_iterator it = priceTable.begin();
     for(; it != priceTable.end(); it++){
         PriceTable[(*it).first] = (*it).second;
     }

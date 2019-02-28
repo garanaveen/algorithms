@@ -6,11 +6,11 @@
 //31
 //https://www.hackerrank.com/challenges/bitset-1
 
-int MaxSubArray::FindMaxNonContigiousSubArray(const vector<int> &vi)
+int MaxSubArray::FindMaxNonContigiousSubArray(const std::vector<int> &vi)
 {
     int nonContigiousPositiveSum = 0;
     int maxNumber = -1000;//TODO:Should be something like -MAX_INT
-    vector<int>::const_iterator it= vi.begin();
+    std::vector<int>::const_iterator it= vi.begin();
     for(; it != vi.end(); it++){
         if(*it > 0){
         nonContigiousPositiveSum += *it;
@@ -25,7 +25,7 @@ int MaxSubArray::FindMaxNonContigiousSubArray(const vector<int> &vi)
 }
 
 
-int MaxSubArray::FindMaxCrossingSubArray(const vector<int>& vi, const int& low, const int& mid, const int& high)
+int MaxSubArray::FindMaxCrossingSubArray(const std::vector<int>& vi, const int& low, const int& mid, const int& high)
 {
     int leftSumMax = -1000;//TODO:Should be something like -MAX_INT
     int leftSum = 0;
@@ -53,7 +53,7 @@ int MaxSubArray::FindMaxCrossingSubArray(const vector<int>& vi, const int& low, 
     return leftSumMax+rightSumMax;
 }
 
-int MaxSubArray::FindMaxContigiousSubArray(const vector<int> &vi, const int &low, const int &high)
+int MaxSubArray::FindMaxContigiousSubArray(const std::vector<int> &vi, const int &low, const int &high)
 {
     int maxSum;
     if(low != high)
@@ -91,7 +91,7 @@ int MaxSubArray::FindMaxContigiousSubArray(const vector<int> &vi, const int &low
 }
 
 
-int MaxSubArray::FindMaxSubArray(const vector<int> &vi, bool contigious)
+int MaxSubArray::FindMaxSubArray(const std::vector<int> &vi, bool contigious)
 {
     int max;
     if(contigious)

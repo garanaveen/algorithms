@@ -1,7 +1,6 @@
 #include "SupermarketQueue.h"
 #include <iostream>
 #include <algorithm>
-using namespace std;
 
 void SupermarketQueue::InitializeCheckoutTills(int size)
 {

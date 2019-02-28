@@ -1,10 +1,25 @@
 #include "TestConstExpr.h"
 #include <iostream>
 
+namespace
+{
+    constexpr const char TIME_FORMAT[] = "yyyy-MM-dd hh:mm:ss";
+}
 
 int TestConstExpr::TestClass::SomeFunction()
 {
-   std::cout << "TIME_FORMAT : " << TestConstExpr::TIME_FORMAT << std::endl;
-//   std::cout << "TIME_FORMAT_SIZE : " << TestConstExpr::TIME_FORMAT_SIZE << std::endl;
    return 0;
 }
+
+#if 0
+constexpr const char* TestConstExpr::TestClass::GetTimeFormat()
+{
+   return TIME_FORMAT;
+}
+
+constexpr int TestConstExpr::TestClass::GetTimeFormatSize()
+{
+//   return sizeof(TIME_FORMAT);
+   return 25;
+}
+#endif

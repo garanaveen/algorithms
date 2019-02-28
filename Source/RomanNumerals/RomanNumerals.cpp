@@ -3,8 +3,6 @@
 #include <vector>
 #include <map>
 
-using namespace std;
-
 std::string RomanNumerals::Convert(int arabicNumber)
 {
     std::string romanString;

@@ -7,14 +7,18 @@
 
 namespace TestConstExpr
 {
-    constexpr const char* TIME_FORMAT = "yyyy-MM-dd hh:mm:ss";
-//    constexpr const int TIME_FORMAT_SIZE = strlen(TIME_FORMAT) + 1;
+    constexpr const char* TIME_FORMAT = "yyyy-MM-dd hh:mm:ss"; //This throws multiple definitions error
+    //static constexpr auto& TIME_FORMAT = "yyyy-MM-dd hh:mm:ss:nnn";
+    constexpr const int TIME_FORMAT_SIZE = sizeof(TIME_FORMAT);
 
     class TestClass
     {
 	public:
 	    int SomeFunction();
 	private:
-//	    char arr[TIME_FORMAT_SIZE];
+//	    constexpr const char* GetTimeFormat();
+//	    static constexpr int GetTimeFormatSize();
+	    char arr[TIME_FORMAT_SIZE];
     };
 }
+

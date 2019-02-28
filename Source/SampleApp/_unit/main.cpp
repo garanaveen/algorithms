@@ -5,8 +5,6 @@
 #include <gtest/gtest.h>
 #include <algorithm>
 
-using namespace std;
-
 namespace {
 class SampleAppTest : public ::testing::Test {
 protected:

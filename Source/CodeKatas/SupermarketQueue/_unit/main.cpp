@@ -11,7 +11,6 @@
 #include <gtest/gtest.h>
 #include <algorithm>
 
-using namespace std;
 
 namespace {
     class SupermarketQueueTest : public ::testing::Test {

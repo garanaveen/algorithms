@@ -7,8 +7,6 @@
 typedef int RodLength;
 typedef int RodPrice;
 
-using namespace std;
-
 class RodCutting
 {
 public:
@@ -16,11 +14,11 @@ public:
     int FirstCut(int rodSize);
 
     //Set the price table
-    void SetPriceTable(const vector<pair<RodLength, RodPrice> >& priceTable);
+    void SetPriceTable(const std::vector<std::pair<RodLength, RodPrice> >& priceTable);
 
     void FitzBuzz();
 private:
-    map<RodLength, RodPrice> PriceTable;
+    std::map<RodLength, RodPrice> PriceTable;
 };
 
 #endif

@@ -11,8 +11,6 @@
 #include <gtest/gtest.h>
 #include <algorithm>
 
-using namespace std;
-
 /*
  * https://www.hackerrank.com/challenges/maxsubarray
  * https://www.hackerrank.com/challenges/maxsubarray/submissions/code/20003555
@@ -29,7 +27,7 @@ protected:
   virtual ~MaxSubArrayTest()
   {}
 
-  void BuildVectorOfManyElements(vector<int>& vi)
+  void BuildvectorOfManyElements(std::vector<int>& vi)
   {
     for (int i = 0; i < 100; i++)
     {
@@ -41,7 +39,7 @@ protected:
 
 TEST_F(MaxSubArrayTest, AllPositives)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   vi.push_back(1);
   vi.push_back(2);
   vi.push_back(3);
@@ -58,7 +56,7 @@ TEST_F(MaxSubArrayTest, AllPositives)
 
 TEST_F(MaxSubArrayTest, AllNegative)
 {
-    vector<int> vi;
+    std::vector<int> vi;
     vi.push_back(-100);
     vi.push_back(-1);
 
@@ -71,7 +69,7 @@ TEST_F(MaxSubArrayTest, AllNegative)
 
 TEST_F(MaxSubArrayTest, PositiveAndNegative)
 {
-  vector<int> vi;
+  std::vector<int> vi;
   vi.push_back(2);
   vi.push_back(-1);
   vi.push_back(2);
