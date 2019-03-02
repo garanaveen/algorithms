@@ -13,6 +13,6 @@ _RodCuttingTest failing
 
 -----------------------------------------------------------------------------------
 
-#pragma once in all files.
-Remove using namespace std
 
+-----------------------------------------------------------------------------------
+Move coding practice directories to garanaveen/coding repo.
