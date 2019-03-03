@@ -43,7 +43,7 @@ int main() {
     
     //Since first element is already read, start from 1 instead of 0.
     for(int i=1; i < A; i++){
-        num;
+        int num;
         std::cin >> num;
         vi[HashMod(num)]--;
     }
