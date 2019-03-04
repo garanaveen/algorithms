@@ -1,5 +1,4 @@
-#ifndef SAMPLE_APP_H
-#define SAMPLE_APP_H
+#pragma once
 
 class SampleApp
 {
@@ -7,4 +6,3 @@ public:
     int SampleFunction();
 };
 
-#endif //SAMPLE_APP_H

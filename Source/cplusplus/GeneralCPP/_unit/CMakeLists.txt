@@ -9,6 +9,6 @@ GeneralCPP
 )
 
 add_dependencies(${PROJECT_NAME} ${PROJECT_DEPEND})
-INCLUDE_DIRECTORIES("${TOP_LEVEL_PROJECT_SOURCE}/Source/CPlusPlus")
+INCLUDE_DIRECTORIES("${TOP_LEVEL_PROJECT_SOURCE}/Source/cplusplus")
 
 target_link_libraries(${PROJECT_NAME} ${PROJECT_DEPEND} gtest)

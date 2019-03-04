@@ -1,5 +1,4 @@
-#ifndef ROD_CUTTING_H
-#define ROD_CUTTING_H
+#pragma once
 
 #include <vector>
 #include <map>
@@ -21,4 +20,3 @@ private:
     std::map<RodLength, RodPrice> PriceTable;
 };
 
-#endif
