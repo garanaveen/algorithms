@@ -1,8 +1,6 @@
-
 #include "GeneralCPP.h"
 #include "TestConstExpr.h"
 #include <iostream>
-
 
 int GeneralCPP::FunctionWithStdOut()
 {
@@ -14,4 +12,10 @@ int GeneralCPP::FunctionWithStdOut()
 int GeneralCPP::FunctionWithStdErr()
 {
    return 0;
+}
+
+std::vector<int> GeneralCPP::ReturnVector()
+{
+   //Its possible to return a vector in this format.
+   return {1,2,3};
 }

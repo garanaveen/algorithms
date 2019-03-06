@@ -1,5 +1,6 @@
 #include <GeneralCPP/GeneralCPP.h>
 #include <GeneralCPP/TestConstExpr.h>
+#include <vector>
 #include <gtest/gtest.h>
 
 namespace {
@@ -23,6 +24,17 @@ TEST_F(GeneralCPPTest, CallingFunctionsShouldWork)
    TestObj.FunctionWithStdErr();
    TestObj.FunctionWithStdOut();
    ConstExprObj.SomeFunction();
+}
+
+TEST_F(GeneralCPPTest, ReturningVectorDirectly)
+{
+   std::cout<< "ReturningVectorDirectly : ";
+   std::vector<int> vec = TestObj.ReturnVector();
+   for(int& i : vec)
+   {
+      std::cout<< i << "," ;
+   }
+   std::cout << std::endl;
 }
 
 int main(int argc, char **argv)
