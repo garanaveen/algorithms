@@ -24,9 +24,10 @@ after clone, create build directory at the root of source directory and run "cma
 
 Instructions on Linux,
 ======================
-Clone the repo
-Install gtest using this script - linuxcommands/scripts/installgtest.sh
-Create build director at the root of the source directory and run "cmake ../"
-Then run "make"
+* Clone the repo
+* Install gtest using this script - linuxcommands/scripts/installgtest.sh
+* Create build director at the root of the source directory and run "cmake ../"
+* Run "make"
+
 This should generate _SampleAppTest
 
