@@ -20,3 +20,13 @@ Added uncrustify.cfg to the repository.
 
 Instruction on mac,
 after clone, create build directory at the root of source directory and run "cmake ../" followed by make to generate _SampleAppTest in build directory.
+
+
+Instructions on Linux,
+======================
+Clone the repo
+Install gtest using this script - linuxcommands/scripts/installgtest.sh
+Create build director at the root of the source directory and run "cmake ../"
+Then run "make"
+This should generate _SampleAppTest
+
