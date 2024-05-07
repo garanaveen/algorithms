@@ -8,3 +8,7 @@ add_subdirectory(DynamicProgramming)
 add_subdirectory(SampleApp)
 add_subdirectory(SampleApp/_unit)
 add_subdirectory(cplusplus)
+
+
+add_subdirectory(BenchmarkSampleApp)
+add_subdirectory(BenchmarkSampleApp/_unit)

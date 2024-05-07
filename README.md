@@ -26,8 +26,14 @@ Instructions on Linux,
 ======================
 * Clone the repo
 * Install gtest using this script - linuxcommands/scripts/installgtest.sh
-* Create build director at the root of the source directory and run "cmake ../"
+* Create build director at the root of the source directory and run "cmake ../" inside of build directory.
 * Run "make"
 
 This should generate _SampleAppTest
 
+
+
+Instructions on generating _BenckmarkSampleAppTest
+==================================================
+make _BenckmarkSampleAppTest
+Currently generating "fatal error: benchmark/benchmark.h: No such file or directory"
